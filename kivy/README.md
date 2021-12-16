@@ -8,10 +8,11 @@ Kivy has a whole design language. With that design language, we abstarct away al
 We use latter method most of the time instead of explicitly putting things in out python code.
 
 * Design file should have same name without App part i.e. If main class is `MyApp` then design file should be names `My.kv`. Using `myapp.kv` will throw an error.
+* We can use `Builder` to get around above notation and using any name for the file.
 * When we run, kivy looks for this file by default, and we do not need to reference it or write anything in the main file.
 * Adding `size: root.width, root.height` is important and fixes the design to the window size.
 * Method `press` requires `(self, isntance)` in python design but only `self` in `.kv` design.
-* 
+
 ## Setting widget height and width
 * We can pass `height` and `width` while defining widgets. 
 * Important to set `size_hint_x=None` or `size_hint_y=None`. We can also do this as `size_hint = (None, None)`.
@@ -27,3 +28,4 @@ self.button_grid = GridLayout(row_force_default=True,
 
 ```
 
+* Using `BoxLayout` for buttons is good.
