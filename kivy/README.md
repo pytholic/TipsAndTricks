@@ -29,3 +29,27 @@ self.button_grid = GridLayout(row_force_default=True,
 ```
 
 * Using `BoxLayout` for buttons is good.
+
+## Changing background color
+### Method # 1
+CHanging in `.kv` file.
+
+```
+canvas.before:
+  Color:
+  	rgba: (1,1,1,0.4)
+  Rectangle:
+  	pos: self.pos
+  	size: self.size
+```
+
+### Method # 2
+Change in main app file.
+```
+from kivy.core.window import Window
+
+class MyApp(App):
+    def build(self):
+        Window.clearcolor = (1,1,1,1)
+        return MyLayout()
+```
