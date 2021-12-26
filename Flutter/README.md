@@ -25,3 +25,21 @@ Container (
     ),
    ),
 ```
+
+## Changing app display name
+To change the app display name under the app `icon`. \
+For Android:
+* Open `AndroidManifest.xml` (located at `android/app/src/main`)
+* Insert you app name in the following field.
+```html
+<application
+    android:label="App Name" ...> // Your app name here
+```
+
+For iOS:
+* Open `info.plist` (located at `ios/Runner`)
+* Insert you app name in the following field.
+```html
+<key>CFBundleName</key>
+<string>App Name</string> // Your app name here
+```
