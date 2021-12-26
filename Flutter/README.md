@@ -70,7 +70,12 @@ flutter_icons:
   ios: true
   image_path: "assets/icon/icon.png"
 ```
-
+* Run the package
+After setting up the configuration, all that is left to do is run the package.
+```console
+flutter pub get
+flutter pub run flutter_launcher_icons:main
+```
 ### Issue
 ```
 Unhandled exception:
