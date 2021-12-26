@@ -61,7 +61,7 @@ For iOS:
 Use `flutter_launcher_icons` package.
 
 * Add your Flutter Launcher Icons configuration to your `pubspec.yaml` or create a new config file called `flutter_launcher_icons.yaml`
-```html
+```yaml
 dev_dependencies:
   flutter_launcher_icons: "^0.9.2"
 
