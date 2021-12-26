@@ -45,7 +45,31 @@ For iOS:
 ```
 
 ## Changing app icon
+* Go to [appicon.co](https://appicon.co/) and convert your `.png` file to `.ico` file
 
+### Manual Way:
+
+#### For Android
+* Navigate to `android/app/src/main/res` and right-click on res folder and click `“reveal in Explorer”`. 
+* Now delete all the **mipmap** folders in `res` folder and paste the mipmap folders from `AppIcon/android` folder which you have downloaded.
+
+#### For iOS
+* Now navigate to the `ios/Runner/Assets.xcassets`. Now after you are in Runner folder, right-click on Runner folder and click `“reveal in Explorer”`.
+* Now delete the `Assets.xcassets` folder and paste the Assets.xcassets folder from `AppIcon/Assets.xcassets` which you have downloaded.
+
+### Automatic Way
+Use `flutter_launcher_icons` package.
+
+* Add your Flutter Launcher Icons configuration to your `pubspec.yaml` or create a new config file called `flutter_launcher_icons.yaml`
+```html
+dev_dependencies:
+  flutter_launcher_icons: "^0.9.2"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+```
 
 ### Issue
 ```
