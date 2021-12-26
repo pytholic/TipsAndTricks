@@ -72,7 +72,7 @@ flutter_icons:
 ```
 * Run the package
 After setting up the configuration, all that is left to do is run the package.
-```console
+```terminal
 flutter pub get
 flutter pub run flutter_launcher_icons:main
 ```
