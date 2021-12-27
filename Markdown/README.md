@@ -22,3 +22,13 @@ Luckily, we can use `html` image tags to make enhance our docs.
 ```
 <!---text--->
 ```
+
+## Creating click labels
+```md
+## [Environment setup](#env-setup)
+
+<a name="env-setup"></a>
+## Environment setup
+```
+
+
