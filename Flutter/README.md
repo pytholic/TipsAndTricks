@@ -80,6 +80,8 @@ flutter pub run flutter_launcher_icons:main
 ```
 Unhandled exception:
 FormatException: Invalid number (at character 1)
+
+pub finished with exit code 255
 ```
 
 In `lib/android.dart`, change:
