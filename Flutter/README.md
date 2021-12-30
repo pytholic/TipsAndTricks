@@ -1,6 +1,9 @@
 # Overview
 Helpful stuff while working on **Flutter** apps
 
+## Firebase Setup
+You always need to setup firebase online and also config fiel seprately for `Anroid` and `iOS`. If you see blank white screen, probably means your firebase is not initialzied.
+
 ## Changing Background colors
 ### TextFormField
 * Use `fillColor` and `filled` attributes of InputDecoration
