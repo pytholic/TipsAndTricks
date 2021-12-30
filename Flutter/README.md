@@ -1,4 +1,5 @@
-# Notes
+# Overview
+Helpful stuff while working on **Flutter** apps
 
 ## Changing Background colors
 ### TextFormField
@@ -110,5 +111,62 @@ to
   }
   return 0; // Didn't find minSdk, assume the worst
 ```
+
+## Adding two Floating Buttons
+Use `Row` wrapper.
+```dart
+floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            backgroundColor: Colors.red,
+            onPressed: () => {},
+            child: const Icon(Icons.add),
+            heroTag: null,
+          ),
+          FloatingActionButton(
+            backgroundColor: Colors.red,
+            onPressed: () => {},
+            child: const Icon(Icons.remove),
+            heroTag: null,
+          ),
+        ],
+      ),
+```
+
+## Stack
+Use when placing `widgets` on top of each other.
+
+## Positioned Wrapper
+Use `Positioned()` wrapping inside `stack` or toher containers. Use combination of width, height, top, left, right and bottom.
+
+## Expanded
+You should use **Expanded** only within a `column`, `row` or `flex`. Otherwise you get following exception.
+```console
+Another exception was thrown: Incorrect use of ParentDataWidget.
+```
+
+## To disable zoom out animation in text fields
+Use `FloatingLabelBehavior.never` inside `InputDecoration` will help you hiding your label and instead of 
+`labelText` you can use `hintText` so it becomes disappear when you type something.
+```dart
+TextFormField(
+    decoration: InputDecoration(
+        hintText: "Search",
+        floatingLabelBehavior: FloatingLabelBehavior.never,
+        border: InputBorder.none,
+        suffixIcon: Icon(
+            Icons.search,
+        ),
+    ),
+),
+```
+
+## Only digit input
+```dart
+TextFormField(
+        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+```
+
 
 
