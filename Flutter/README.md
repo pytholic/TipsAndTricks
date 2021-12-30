@@ -80,7 +80,7 @@ After setting up the configuration, all that is left to do is run the package.
 flutter pub get
 flutter pub run flutter_launcher_icons:main
 ```
-### Issue
+### Issue #1
 ```
 Unhandled exception:
 FormatException: Invalid number (at character 1)
@@ -114,6 +114,32 @@ to
   }
   return 0; // Didn't find minSdk, assume the worst
 ```
+
+### Issue #2
+On `Android`, you will notice that not the entire app icon is filled and we have some `white` space around the icon. 
+To fix this, we want to use **Android Adaptive Icons**. It consists of two layers, the `foreground` image and the `background` image.
+
+* Simply upload your `icon` to this [website](http://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=clipart&foreground.clipart=android&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(68%2C%20138%2C%20255)&crop=0&backgroundShape=circle&effects=none&name=ic_launcher)
+* Keep the padding to `25%` andf set the shape to `None`
+* Then click on **Download Zip** button
+* Inside the zip folder, you will find the logo file. Rename it as `logo_foreground.png`. After that drag it inside `assets` folder.
+* After this go back to your `pubsepc.yaml` file. Add the following two lines inside your `flutter_icons`.
+```yaml
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+  adaptive_icon_background: "#ffffff"  // can be image or a color
+  adaptive_icon_foreground: "assets/logo_foreground.png"
+```
+
+* Save `pubspec.yaml` file
+* Inside the ternminal, run again the following commands.
+```console
+flutter pub get
+flutter pub run flutter_launcher_icons:main
+```
+ 
 
 ## Adding two Floating Buttons
 Use `Row` wrapper.
