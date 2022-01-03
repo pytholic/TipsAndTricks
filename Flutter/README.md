@@ -1,6 +1,16 @@
 # Overview
 Helpful stuff while working on **Flutter** apps
 
+## General approach ro resolve issues
+Run
+```console
+flutter clean
+flutter pub get
+flutter run
+```
+
+or first try building project directly in *Xcode* by opening `ios` folder and thne run on your *IDE*.
+
 ## Firebase Setup
 You always need to setup firebase online and also config fiel seprately for `Anroid` and `iOS`. If you see blank white screen, probably means your firebase is not initialzied.
 
